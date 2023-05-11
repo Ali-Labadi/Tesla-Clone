@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #171a20;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* NavBar styling --> */
+
+@font-face {
+    font-family: 'TESLA', sans-serif;
+    src: url(fonts/TESLA.ttf);
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    letter-spacing: 0.8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 30px 0px 50px;
+    font-weight: 600;
+}
+
+.navbar-features li,
+.navbar-links li {
+    margin: 0 10px;
+    font-size: 15px;
+    display: inline;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 6px;
+    transition: 0.4s ease-in;
+}
+
+.navbar-features li a {
+    padding: 5px;
+    border-radius: 6px;
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+
+.navbar-features li a:hover,
+.navbar-links li:hover {
+    background-color: rgba(23, 26, 32, 0.07);
+}
+
+h1 {
+    font-family: 'TESLA';
+    letter-spacing: 7px;
+    font-weight: 100;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Side menu styling */
+
+aside {
+    right: -300px;
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    border-top-left-radius: 2px;
+    transition: right 0.5s ease;
+}
+
+aside.active {
+    right: 0;
+}
+
+aside a {
+    display: block;
+    padding-bottom: 30px;
+}
+
+aside a:hover {
+    font-weight: 600;
+}
+
+.side-menu-links {
+    padding: 90px 0 0 50px;
+}
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    padding-top: 20px;
+    font-family: none;
+    font-size: 35px;
+    font-weight: 250;
+}
+
+.active-menu {
+    display: none;
+}
+
+
+/* Models section styling */
+
+body,
+html {
+    height: 100%;
+}
+
+.back-drop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
+}
+
+.back-drop.active {
+    display: block;
+}
+
+.models-section {
+    height: 100%;
+}
+
+.models-section>* {
+    height: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.models-section>* h2 {
+    margin-top: 70px;
+    font-size: 40px;
+}
+
+.models-section>* button {
+    background-color: #393c45;
+    border: none;
+    height: 40px;
+    width: 20%;
+    border-radius: 4px;
+}
+
+.models-section>* a {
+    color: white;
+    font-size: 15px;
+}
+
+.models-section>* button {
+    position: absolute;
+    cursor: pointer;
+}
+
+.model-3 {
+    background-image: url('images/Model3.jpg');
+}
+
+.model-s {
+    background-image: url('images/ModelS.jpg');
+}
+
+.model-x {
+    background-image: url('images/ModelX.jpg');
+}
+
+.model-y {
+    background-image: url('images/ModelY.jpg');
+}
+
+.solarPowerwall {
+    background-image: url('images/Solar&Power.jpg');
+}
+
+.model-3 button {
+    top: 45em;
+}
+
+.model-s button {
+    bottom: -57em;
+}
+
+.model-x button {
+    bottom: -108.5em;
+}
+
+.model-y button {
+    bottom: -159.5em;
+}
+
+.solarPowerwall button {
+    bottom: -211.5em;
+}
+
+.solarPowerwall span {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* Footer styling */
+
+.footer {
+    background-color: #000;
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.footer a {
+    color: #cdcecf;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Styling for mobile devices */
+
+@media(max-width:1150px) {
+    .navbar-features {
+        display: none;
+    }
+    /* to target the first two elements ('Support' and 'Account') */
+    .navbar-links li:nth-child(-n+2) {
+        display: none;
+    }
+    #menu {
+        background-color: rgba(23, 26, 32, 0.1);
+    }
+    .side-menu-links a {
+        padding: 0 0 12px 0;
+    }
+    .side-menu-links {
+        padding: 30px 0 0 50px;
+    }
+    .active-menu {
+        display: block;
+    }
+}
